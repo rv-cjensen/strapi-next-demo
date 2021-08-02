@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "homeys",
+  "info": {
+    "name": "Homey",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "body": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.character-list"
+      ]
+    },
+    "page_title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

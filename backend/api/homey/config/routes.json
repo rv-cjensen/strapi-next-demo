@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/homey",
+      "handler": "homey.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/homey",
+      "handler": "homey.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/homey",
+      "handler": "homey.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

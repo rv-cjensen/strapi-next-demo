@@ -1,17 +1,16 @@
-import React from "react"
-import Articles from "../components/articles"
 import Layout from "../components/layout"
+import Characters from '../components/characters'
 import Seo from "../components/seo"
 import { fetchAPI } from "../lib/api"
 
-const Home = ({ articles, categories, homepage }) => {
+const Home = ({ characters, homepage }) => {
   return (
-    <Layout categories={categories}>
+    <Layout characters={characters}>
       <Seo seo={homepage.seo} />
       <div className="uk-section">
         <div className="uk-container uk-container-large">
           <h1>{homepage.hero.title}</h1>
-          <Articles articles={articles} />
+          <Characters characters={characters} />
         </div>
       </div>
     </Layout>
@@ -20,14 +19,13 @@ const Home = ({ articles, categories, homepage }) => {
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const [articles, categories, homepage] = await Promise.all([
-    fetchAPI("/articles"),
-    fetchAPI("/categories"),
+  const [characters, homepage] = await Promise.all([
+    fetchAPI("/characters"),
     fetchAPI("/homepage"),
   ])
 
   return {
-    props: { articles, categories, homepage },
+    props: { homepage, characters },
     revalidate: 1,
   }
 }

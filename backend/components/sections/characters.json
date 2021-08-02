@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_sections_characters",
+  "info": {
+    "name": "Characters",
+    "icon": "user-tie"
+  },
+  "options": {},
+  "attributes": {
+    "character": {
+      "model": "character"
+    }
+  }
+}

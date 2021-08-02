@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_sections_character_lists",
+  "info": {
+    "name": "Character_List",
+    "icon": "users"
+  },
+  "options": {},
+  "attributes": {
+    "characters": {
+      "collection": "character"
+    }
+  }
+}
